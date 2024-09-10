@@ -125,7 +125,7 @@ async function onSubmitCode(event) {
 
 
 async function loginAdministration(username: string, password: string) {
-  const url = `${TEST_BASE_URL}/auth/mfa/signin`;
+  const url = `${PROD_BASE_URL}/auth/mfa/signin`;
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -168,7 +168,7 @@ async function loginAdministration(username: string, password: string) {
 
 // Backend API to verify the 2FA code
 async function verifyTwoFactorCode(code: string) {
-  const url = `${TEST_BASE_URL}/auth/mfa/verify-2fa`;
+  const url = `${PROD_BASE_URL}/auth/mfa/verify-2fa`;
 
   try {
     const response = await fetch(url, {
