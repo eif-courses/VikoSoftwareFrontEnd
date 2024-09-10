@@ -185,7 +185,8 @@ async function verifyTwoFactorCode(code: string) {
       body: JSON.stringify({
         userId: userId.value,
         verificationCode: code
-      })
+      }),
+      credentials: 'include' // Add this option to include cookies
     });
 
     if (response.ok) {
