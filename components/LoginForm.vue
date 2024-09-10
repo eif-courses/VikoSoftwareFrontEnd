@@ -48,7 +48,7 @@
         </UForm>
       </UCard>
     </template>
-    <template v-else>
+    <template v-else-if="!twoFactorComplete && !isTwoFactorAuthenticationSetup && !isTwoFactorAuthentication">
       <UCard class="lg:w-1/3 md:w-1/2 xl:w-1/3 sm:w-full">
         <UForm :schema="schema" :state="state" @submit="onSubmit" class="space-y-4">
           <UFormGroup label="Email" name="email">
